@@ -1,3 +1,4 @@
+// Object approach
 
 // function charFreqCount(str) {
 //     let freq={};
@@ -21,19 +22,33 @@
 
 // console.log(charFreqCount("hello world"));
 
-// using map
-function charFreqCount(str) {
-    const freq= new Map();
+// using hashmap approach
 
-    for(let char of str){
-        if(char === " ") continue; // Skip spaces
-        freq.set(char,(freq.get(char) || 0) + 1);
+// function charFreqCount(str) {
+//     const freq= new Map();
+
+//     for(let char of str){
+//         if(char === " ") continue; // Skip spaces
+//         freq.set(char,(freq.get(char) || 0) + 1);
+//     }
+//     return freq;
+// }
+
+// const res = charFreqCount("Hello World");
+// console.log(res)
+
+// const obj = Object.fromEntries(res);
+// console.log(obj)
+
+// using reduce approach
+
+function charFreqCount(str) {
+  return [...str].reduce((acc, char) => {
+    if (char !== " ") {
+      acc[char] = (acc[char] || 0) + 1;
     }
-    return freq;
+    return acc;
+  }, {});
 }
 
-const res = charFreqCount("Hello World");
-console.log(res)
-
-const obj = Object.fromEntries(res);
-console.log(obj)
+console.log(charFreqCount("hello world"));
