@@ -44,10 +44,18 @@
 
 // using axor operation
 
+// function swapTwoNums(a, b) {
+//   a = a ^ b;
+//   b = a ^ b;
+//   a = a ^ b;
+
+//   return [a, b];
+// }
+
+// console.log(swapTwoNums(2,5))
+
 function swapTwoNums(a, b) {
-  a = a ^ b;
-  b = a ^ b;
-  a = a ^ b;
+  a = a + b - (b = a);
 
   return [a, b];
 }
