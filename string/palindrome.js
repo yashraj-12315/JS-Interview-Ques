@@ -1,0 +1,38 @@
+
+// Method 1: Using Two Pointers (Recommended)
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+function isPalindrome(str) {
+  let left = 0;
+  let right = str.length - 1;
+
+  while (left < right) {
+    if (str[left] !== str[right]) {
+      return false;
+    }
+    left++;
+    right--;
+  }
+
+  return true;
+}
+
+// Test Cases
+console.log(isPalindrome("madam"));  // true
+console.log(isPalindrome("racecar")); // true
+console.log(isPalindrome("hello"));   // false
+console.log(isPalindrome("abba"));    // true
+
+// Method 2: Reverse the String
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+function isPalindrome(str) {
+  const reversed = str.split("").reverse().join("");
+  return str === reversed;
+}
+
+// Test Cases
+console.log(isPalindrome("madam"));   // true
+console.log(isPalindrome("hello"));   // false
