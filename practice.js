@@ -1,4 +1,3 @@
-
 // const map = new Map();
 // map.set('a', 1);
 // map.set('b', 2);
@@ -19,3 +18,11 @@
 
 // console.log(res);
 
+// var is function scoped but here it is global scoped
+for (var i = 0; i < 4; i++) {
+  (function (x) {
+    setTimeout(() => {
+      console.log(x);
+    }, 1000);
+  })(i);
+}
