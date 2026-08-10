@@ -19,10 +19,23 @@
 // console.log(res);
 
 // var is function scoped but here it is global scoped
-for (var i = 0; i < 4; i++) {
-  (function (x) {
-    setTimeout(() => {
-      console.log(x);
-    }, 1000);
-  })(i);
-}
+// for (var i = 0; i < 4; i++) {
+//   (function (x) {
+//     setTimeout(() => {
+//       console.log(x);
+//     }, 1000);
+//   })(i);
+// }
+
+
+// let a=100;
+// function outer(){
+//     let a=200;
+//     function inner(){
+//         console.log(a)
+//     }
+//     inner();
+// }
+
+// outer();
+
