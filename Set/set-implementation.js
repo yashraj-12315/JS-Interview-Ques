@@ -17,13 +17,24 @@ const mySet = new Set();
 
 // console.log(uniqueNumbers);
 
-const set = new Set();
+// const set = new Set();
 
-set.add("apple");
-set.add("banana");
+// set.add("apple");
+// set.add("banana");
 
-console.log(set.has("apple")); // true
+// console.log(set.has("apple")); // true
 
-set.delete("apple");
+// set.delete("apple");
 
-console.log(set.size); // 1
+// console.log(set.size); // 1
+
+const email = ["ro@gm", "ra@gm", "ya@gm", "ra@gm"];
+
+const uniqueEmail = [...new Set(email)];
+// console.log(uniqueEmail);
+
+// const s1 = new Set(email);
+
+for (let mail of uniqueEmail) {
+  console.log(mail);
+}
